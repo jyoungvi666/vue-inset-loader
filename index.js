@@ -62,7 +62,7 @@ function init(that){
 	const isWx = process.env.VUE_APP_PLATFORM == 'mp-weixin'
 	// 首次需要对pages配置文件做解析，并判断是否为有效配置
 	// 非小程序环境或无效配置不予处理
-	needHandle = isWx && initPages(that)
+	needHandle = initPages(that)
 	// 转换为路由和配置的映射对象
 	needHandle && (pagesMap = getPagesMap())
 }
